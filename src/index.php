@@ -1,13 +1,6 @@
 <?php
     //Set up variables
-    $topic = "";
-    $article = "";
-    if (isset($_GET['topic']) and isset($_GET['article'])) {
-        $topic = $_GET['topic'];
-        $article = $_GET['article'];
-    } else {
-        //throw new Exception("No ARTICLE OR TOPIC PROVIDED");
-    }
+    // N.A.
 
     //Return Page
     echo "<!DOCTYPE html>";
@@ -19,7 +12,7 @@
             readfile("./Resources/Components/Shared/header.html");
 
             //Internal body goes here
-
+            readfile("./Resources/Components/indexMain.html");
 
             readfile("./Resources/Components/Shared/footer.html");
         echo "</body>";
