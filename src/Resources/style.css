@@ -1,5 +1,11 @@
+/*Color scheme*/
+body{background-color: #2A024F;}                            /*Background Color*/
+#header, main, footer {box-shadow: 0.5vw 1vh 15px #1a0132;} /*Shadow Color*/
+#header, main {background-color: white;}                    /*Body Color*/
+nav, footer{background-color: #440381;}                     /*Accent Color*/
+nav a:hover {background-color: #531CB3;}                    /*Active Color*/
+
 body {
-    background-color: #2A024F;
     font-family: Arial, Helvetica, sans-serif;
 
     width: 100%;
@@ -10,27 +16,13 @@ body {
 }
 
 #header, main, footer {
-    box-shadow: 0.5vw 1vh 15px #1a0132;
-
     width: 72vw;
     margin: 3vh 14vw 0px 14vw;
     border-radius: 1vw;
 }
 
-#header{
-    background-color: white;
-}
-
-main {
-    background-color: white;
-}
 #mainBody{
     padding: 1vh 1vw 1vh 1vw;
-}
-
-footer {
-    background-color: #440381;
-    color: white;
 }
 #footerBody{
     padding: 1vh 1vw 1vh 1vw;
@@ -44,8 +36,6 @@ h1 {
 }
 
 nav {
-    background-color: #440381;
-
     margin: 0px;
     border-radius: 1vw;
     position: relative;
@@ -57,9 +47,6 @@ nav a, nav a:active {
     padding: 2vh 2vw 2vh 2vw;
     display: inline-block;
     border-radius: 1vw;
-}
-nav a:hover {
-    background-color: #531CB3;
 }
 
 .codeSnippet{
