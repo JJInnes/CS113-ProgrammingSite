@@ -1,20 +1,26 @@
 <?php
     //Set up variables
-    // N.A.
+
+    //Set up components
+    $pageHead = fread(fopen("./Resources/Components/Shared/pagehead.html", "r"), filesize("./Resources/Components/Shared/pagehead.html"));
+    $header = fread(fopen("./Resources/Components/Shared/header.html", "r"), filesize("./Resources/Components/Shared/header.html"));
+    $header = str_replace("_TITLE_", "Become a Web Dev!!", $header);
+    $body = fread(fopen("./Resources/Components/indexMain.html", "r"), filesize("./Resources/Components/indexMain.html"));
+    $footer = fread(fopen("./Resources/Components/Shared/footer.html", "r"), filesize("./Resources/Components/Shared/footer.html"));
 
     //Return Page
     echo "<!DOCTYPE html>";
     echo '<html lang="en">';
 
-        readfile("./Resources/Components/Shared/pagehead.html");
+        echo $pageHead;
 
         echo "<body>";
-            readfile("./Resources/Components/Shared/header.html");
+            echo $header;
 
             //Internal body goes here
-            readfile("./Resources/Components/indexMain.html");
+            echo $body;
 
-            readfile("./Resources/Components/Shared/footer.html");
+            echo $footer;
         echo "</body>";
 
     echo "</html>";
