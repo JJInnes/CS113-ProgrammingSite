@@ -1,12 +1,14 @@
 <?php
+    include "./Resources/helper.php";
+
     //Set up variables
 
     //Set up components
-    $pageHead = fread(fopen("./Resources/Components/Shared/pagehead.html", "r"), filesize("./Resources/Components/Shared/pagehead.html"));
-    $header = fread(fopen("./Resources/Components/Shared/header.html", "r"), filesize("./Resources/Components/Shared/header.html"));
-    $header = str_replace("_TITLE_", "Become a Web Dev!!", $header);
-    $body = fread(fopen("./Resources/Components/indexMain.html", "r"), filesize("./Resources/Components/indexMain.html"));
-    $footer = fread(fopen("./Resources/Components/Shared/footer.html", "r"), filesize("./Resources/Components/Shared/footer.html"));
+    $pageHead = getComponent("./Resources/Components/Shared/pagehead.html");
+    $header = getComponent("./Resources/Components/Shared/header.html");
+    $header = str_replace("_TITLE_", "Learn to make websites!!", $header);
+    $body = getComponent("./Resources/Components/indexMain.html");
+    $footer = getComponent("./Resources/Components/Shared/footer.html");
 
     //Return Page
     echo "<!DOCTYPE html>";
