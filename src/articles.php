@@ -24,19 +24,5 @@
 
 
     //Return Page
-    echo "<!DOCTYPE html>";
-    echo '<html lang="en">';
-
-        echo $pageHead;
-
-        echo "<body>";
-            echo $header;
-
-            //Internal body goes here
-            //echo $body;
-
-            echo $footer;
-        echo "</body>";
-
-    echo "</html>";
+    returnPage($pageHead, $header, "", $footer);
 ?>
