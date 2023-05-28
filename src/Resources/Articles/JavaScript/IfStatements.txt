@@ -1,0 +1,39 @@
+If statements
+I’d bet by now you are beginning to see how programs are built. You put data in variables, then use operators to do the basic arithmetic with them. But how do we make decisions?
+This is where conditional statements, or if statements come in. They allow us to decide whether or not to run blocks of code based on logical expressions, and are written like this:
+if(){
+
+}
+The condition for the if statement goes into the "()" and a block of code goes between the curly brackets, this code will only run if the condition evaluates to true.
+
+For example the code block here will run:
+if(0 < 1){
+
+}
+END IF
+But the code block here will not:
+if(1 < 0){
+
+}
+And this code block will only run if the variable “x” is a positive number
+if(x > 0){
+
+}
+
+Along with if statements, you may also use else statements.
+ELSE statements take no condition but have their own code block, which only runs if the previous IF statement does not run its code (as its condition was false), for example:
+if(x < 0){
+	console.log("Negative");
+} else {
+	console.log("Positive");
+}
+
+ELSE IF statements are good if you want to chain conditions together, for example:
+if(x < 0){
+	console.log("Negative");
+} else if (x == 0) {
+	console.log("Zero");
+} else {
+	console.log("Positive");
+}
+This new condition is only checked if the previous one is false. You can chain many else if statements together.

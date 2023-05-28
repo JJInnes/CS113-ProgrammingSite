@@ -1,0 +1,12 @@
+Variables are how we temporarily store data for our program to use, and are defined in javascript like this: 
+var myVariable;
+or
+let myVariable;
+We can also set the value of myVariable on its creation
+var myVariable = "Hello World";
+Nice and simple, now lets get into the details.
+Currently myVariable is a string (text). Other common types include floating point numbers (any number, including decimals), integers (whole numbers), characters (individual letters) and Booleans (true or false). 
+Javascript is dynamically typed, so you do not need to specify the type of a variable, and can change the type of a variable simply by reassigning it, for example to change it to a boolean:
+myVariable = true;
+The name of the variable is how you reference it later on in the program (e.g. to reference this variable you just have to write “myVariable” and its value will be "substituted" for the reference) – you choose the name, it can be anything you want – as long as it does not contain spaces. It is considered good practice to make variable names descriptive (even if they are long) as it helps keep code understandable, and most code-editors let you press tab to auto-complete variable names anyway.
+You can declare a variable’s value when you create it, or you can leave it empty until later if you choose. Empty variables will contain the value NULL – the absence of value (as opposed to 0, which is still a value).
