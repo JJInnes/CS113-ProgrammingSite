@@ -7,7 +7,7 @@
     $pageHead = getComponent("./Resources/Components/Shared/pagehead.html");
 
     $header = getComponent("./Resources/Components/Shared/header.html");
-    $header = str_replace("_TITLE_", "Learn to make websites!!", $header);
+    //$header = str_replace("_TITLE_", "Learn to make websites!!", $header);
 
     $body = getComponent("./Resources/Components/indexMain.html");
 

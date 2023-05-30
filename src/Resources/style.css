@@ -1,9 +1,5 @@
-/*Color scheme*/
-body{background-color: #2A024F;}                            /*Background Color*/
-#header, main, footer {box-shadow: 0.5vw 1vh 15px #1a0132;} /*Shadow Color*/
-#header, main {background-color: white;}                    /*Body Color*/
-nav, footer{background-color: #440381;}                     /*Accent Color*/
-nav a:hover {background-color: #531CB3;}                    /*Active Color*/
+body{background-color: #FFFFFF;
+     color: #292f36;}
 
 body {
     font-family: Arial, Helvetica, sans-serif;
@@ -14,39 +10,64 @@ body {
     margin: 0px;
     padding: 0px;
 }
-
-#header, main, footer {
-    width: 72vw;
-    margin: 3vh 14vw 0px 14vw;
-    border-radius: 1vw;
+#header, main, footer{
+    padding: 0px;
+    margin: 0px;
 }
 
-#mainBody{
-    padding: 1vh 1vw 1vh 1vw;
+#header{
+    display: flex;
 }
-#footerBody{
-    padding: 1vh 1vw 1vh 1vw;
-}
-
-#title{
+#title, nav a{
     padding: 3vh 3vw 3vh 3vw;
-}
-h1 {
-    margin: 0px;
-}
-
-nav {
-    margin: 0px;
-    border-radius: 1vw;
-    position: relative;
-    top: 1px;
-}
-nav a, nav a:active {
-    color: white;
-
-    padding: 2vh 2vw 2vh 2vw;
+    margin: 1vw 1vh 1vw 1vh;
     display: inline-block;
-    border-radius: 1vw;
+}
+#title{
+    flex-grow: 1;
+}
+nav{
+    display: flex;
+    flex-grow: 10;
+    justify-content: center;
+}
+nav a{
+    border-radius: 4vh;
+}
+nav a:hover{
+    background-color: rgba(0, 0, 0, 0.2);
+}
+a{
+    color: #292f36;
+    text-decoration: none;
+}
+a:active {
+    color: #292f36;
+    text-decoration: none;
+}
+
+p{
+    margin: 0px;
+}
+
+section{
+    width: calc(100vw-12vw);
+    height: auto;
+    padding: 6vh 6vw 6vh 6vw;
+    margin: 8vh 0px 8vh 0px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+section h1, section .sectionHalf{
+    margin: 2vh 2vw 2vh 2vw;
+    width: calc(50% - 4vw);
+    text-align: center;
+}
+section h2, section p, section ol{
+    margin: 2vh 2vw 2vh 2vw;
+    width: calc(33% - 4vw);
+    text-align: center;
 }
 
 .codeSnippet{
