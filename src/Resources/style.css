@@ -85,6 +85,7 @@ section h2, section p, section ol{
     border-color: #6E6E6E;
     color: #6E6E6E;
     font-family: 'Consolas';
+    text-align: left;
 
     margin: 1vh 1vw 1vh 1vw;
     padding-top: 1vh;
