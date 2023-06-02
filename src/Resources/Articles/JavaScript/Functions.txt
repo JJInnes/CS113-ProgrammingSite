@@ -1,0 +1,20 @@
+Functions allow us to take a section of code, simplify it into an input and an output, give it a name and then use it later without worrying about the details. This is a method of abstraction, a concept used to make large programs manageable.
+Abstraction is all about hiding detail, and that’s what functions do. Functions contain a block of code that is executed whenever the function is called. You can give them parameters, which are essentially inputs, and they can return a value. Essentially, they are a process, with an input and output.
+Lets start out with a very simple function:
+function helloWorld(){
+	console.log("Hello World");
+}
+
+Which can be called as follows:
+helloWorld();
+This would return "Hello World" to the console
+
+You can add parameters and a return statement to a function to create inputs and outputs:
+function add (a, b){
+	return a + b;
+}
+
+var total = add(5, 15);
+Would set the value of total to 20.
+
+
