@@ -1,6 +1,9 @@
 <?php
     function getComponent($url){
-        return fread(fopen($url, "r"), filesize($url));
+        $file = fopen($url, "r");
+        $result = fread($file, filesize($url));
+        fclose($file);
+        return $result;
     }
 
     function returnPage($pageHead, $header, $body, $footer){
