@@ -26,7 +26,7 @@
                 $title = "JavaScript";
                 $accentColor = "#FF6B6B";
             break;
-        case "clientservermodel":
+        case "Client_Server_Model":
                 $title = "The Client Server Model";
                 $accentColor = "#ffdf6a";
                 break;
@@ -34,14 +34,22 @@
             break;
       }
 
+    // $title = topicNameToTitle($topic);
+    // $accentColor = topicNameToAccentColor($topic);
+
+    $articles = scandir("./Resources/Articles/$topic");
+
     //Set up components
     $pageHead = getComponent("./Resources/Components/Shared/pagehead.html");
 
     $header = getComponent("./Resources/Components/Shared/header.html");
+ 
+    $articleURLend = $articles[$article + 2];
+    $content = getComponent("./Resources/Articles/$topic/$articleURLend");
 
     $body = getComponent("./Resources/Components/articleBody.html");
     $body = str_replace("_TITLE_", $title, $body);
-    $body = str_replace("_CONTENT_", $topic, $body);
+    $body = str_replace("_CONTENT_", $content, $body);
     $body = str_replace("_ACCENTCOLOR_", $accentColor, $body);
 
     $footer = getComponent("./Resources/Components/Shared/footer.html");
