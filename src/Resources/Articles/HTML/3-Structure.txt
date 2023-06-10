@@ -1,0 +1,21 @@
+The purpose of HTML is structuring the webpage, It gives it structure and tells the browser how everything should be arranged.
+
+In HTML, we use special codes called "tags" to create different elements on a web page. Think of these tags as building blocks. Each tag has a special job, like making headings, paragraphs, images, and links.
+
+An example of what a basic HTML document might look like can be seen below
+
+<html>
+   <head>
+      <title>Hello World!, this is a title</title>
+   </head>
+
+   <body>
+      <h1>Hello World!, this is a heading</h1>
+      <p>Hello World!, this is a paragraph</p>
+   </body>
+</html>
+
+You will notice looking at the document above that it is structured in layers. First we have out head tag, this contains the title for out HTML document.
+Next we have the body tag, this is where most of the content of the webpage should go.
+
+
