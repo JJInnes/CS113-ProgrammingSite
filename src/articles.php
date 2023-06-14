@@ -13,22 +13,27 @@
 
     $title = "";
     $accentColor = "#FFFFFF";
+    $secondaryColor = "#FFFFFF";
     switch ($topic) {
-        case "html":
+        case "HTML":
             $title = "HTML";
             $accentColor = "#5E6CFF";
+            $secondaryColor = "#ABB2FF";
             break;
-        case "css":
+        case "CSS":
             $title = "CSS";
             $accentColor = "#43fe78";
+            $secondaryColor = "#8FFFAF";
             break;
         case "javascript":
                 $title = "JavaScript";
                 $accentColor = "#FF6B6B";
+                $secondaryColor = "#FFB8B8";
             break;
         case "Client_Server_Model":
                 $title = "The Client Server Model";
                 $accentColor = "#ffdf6a";
+                $secondaryColor = "#FFF0B8";
                 break;
         default:
             break;
@@ -43,12 +48,20 @@
     $pageHead = getComponent("./Resources/Components/Shared/pagehead.html");
 
     $header = getComponent("./Resources/Components/Shared/header.html");
+
+    $subNavItem = getComponent("./Resources/Components/Shared/progressNavElement.html");
+    $subNavItems = "";
+    for ($i=0; $i < sizeof($articles) - 2; $i++) { 
+        $currentNavItem = str_replace("__REDIRECT__", "articles.php?topic=$topic&article=$i", $subNavItem);
+        $currentNavItem = str_replace("__SECONDARYCOLOR__", $secondaryColor, $currentNavItem);
+        $subNavItems = $subNavItems . $currentNavItem . "\n";
+    }
  
     $articleURLend = $articles[$article + 2];
     $content = getComponent("./Resources/Articles/$topic/$articleURLend");
-
     $body = getComponent("./Resources/Components/articleBody.html");
     $body = str_replace("_TITLE_", $title, $body);
+    $body = str_replace("__NAVELEMENTS__", $subNavItems, $body);
     $body = str_replace("_CONTENT_", $content, $body);
     $body = str_replace("_ACCENTCOLOR_", $accentColor, $body);
 
