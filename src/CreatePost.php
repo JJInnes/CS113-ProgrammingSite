@@ -18,5 +18,8 @@ $content = $_POST['postContent'];
 
 addPost($title,$author,$category,$content);
 
+header("Location: index.php");
+exit();
+
 
 ?>
