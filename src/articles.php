@@ -15,12 +15,12 @@
     $accentColor = "#FFFFFF";
     $secondaryColor = "#FFFFFF";
     switch ($topic) {
-        case "html":
+        case "HTML":
             $title = "HTML";
             $accentColor = "#5E6CFF";
             $secondaryColor = "#ABB2FF";
             break;
-        case "css":
+        case "CSS":
             $title = "CSS";
             $accentColor = "#43fe78";
             $secondaryColor = "#8FFFAF";
@@ -52,7 +52,7 @@
     $subNavItem = getComponent("./Resources/Components/Shared/progressNavElement.html");
     $subNavItems = "";
     for ($i=0; $i < sizeof($articles) - 2; $i++) { 
-        $currentNavItem = str_replace("__REDIRECT__", "articles.php?topic=javascript&article=$i", $subNavItem);
+        $currentNavItem = str_replace("__REDIRECT__", "articles.php?topic=$topic&article=$i", $subNavItem);
         $currentNavItem = str_replace("__SECONDARYCOLOR__", $secondaryColor, $currentNavItem);
         $subNavItems = $subNavItems . $currentNavItem . "\n";
     }
