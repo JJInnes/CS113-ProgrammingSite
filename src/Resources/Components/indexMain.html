@@ -1,12 +1,14 @@
+<script src="./Resources/Components/Shared/animations.js"></script>
+
 <main id="mainBody">
     <section>
         <h1>Welcome to LearnWebDev</h1>
         <p class="sectionHalf">LearnWebDev is your go-to resource for mastering HTML, CSS, and JavaScript! Whether you're a complete beginner or looking to expand your web development skills, this tutorial website is designed to guide you through the exciting journey of building dynamic and engaging websites. From crafting beautiful layouts with HTML and CSS to adding interactivity and functionality with JavaScript, our comprehensive tutorials will provide you with the knowledge and hands-on practice to create stunning web experiences. Join us as we demystify the world of web development and empower you to bring your ideas to life.</p>    
     </section>
 
-    <a href="articles.php?topic=html&article=introduction">
+    <a href="articles.php?topic=HTML&article=0" onmouseover="typingAnimation('htmlTitle', '<HTML />')">
         <section style="background-color: #5E6CFF; color: white;">
-            <h2>HTML</h2>
+            <h2 id="htmlTitle" class="left">HTML</h2>
             <p>HTML will be the foundation upon which the rest of your webpage will be built - it may not be all that exciting on its own, but is your first step to learning web development!</p>
             <ol class="codeSnippet">
                 <li>&lt;html&gt;</li>
@@ -18,9 +20,9 @@
         </section>
     </a>
 
-    <a href="articles.php?topic=css&article=introduction">
+    <a href="articles.php?topic=CSS&article=0" onmouseover="typingAnimation('cssTitle', '#CSS{   }')">
         <section style="background-color: #43fe78; color: white;">
-            <h2>CSS</h2>
+            <h2 id="cssTitle" class="left">CSS</h2>
             <p>With CSS you can add some visual flair to your website: color, layout and even animation can be handled with CSS</p>
             <ol class="codeSnippet">
                 <li>h1{</li>
@@ -32,9 +34,9 @@
     </a>
     
 
-    <a href="articles.php?topic=javascript&article=introduction">
+    <a href="articles.php?topic=javascript&article=0" onmouseover="typingAnimation('jsTitle', 'Javascript();')">
         <section style="background-color: #FF6B6B; color: white;">
-            <h2>Javascript</h2>
+            <h2 id="jsTitle" class="left">Javascript</h2>
             <p>Javascript is where things really can get interesting. Create more interactive and dynamic features with client side scripts!</p>
             <ol class="codeSnippet">
                 <li>console.log("Hello World!!!");</li>
@@ -43,9 +45,9 @@
     </a>
     
 
-    <a href="articles.php?topic=clientservermodel&article=introduction">
+    <a href="articles.php?topic=Client_Server_Model&article=0">
         <section style="background-color: #ffdf6a; color: white;">
-            <h2>The Client-Server Model</h2>
+            <h2 class="left">The Client-Server Model</h2>
             <p>Understanding the client-server model is crucial to more advanced development practices and features involving a proper back-end.</p>
         </section>
     </a>
