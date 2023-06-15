@@ -1,0 +1,49 @@
+<p>I’d bet by now you are beginning to see how programs are built. You put data in variables, then use operators to do the basic arithmetic with them. But how do we make decisions?</p>
+<br>
+<p>This is where conditional statements, or if statements come in. They allow us to decide whether or not to run blocks of code based on logical expressions, and are written like this:</p>
+<ol class="codeSnippet">
+    <li>if(){</li>
+	<li> </li>
+	<li>}</li>
+</ol>
+<p>The condition for the if statement goes into the "()" and a block of code goes between the curly brackets, this code will only run if the condition evaluates to true.</p>
+<br>
+<p>For example the code block here will run:</p>
+<ol class="codeSnippet">
+    <li>if(0 < 1){</li>
+	<li> </li>
+	<li>}</li>
+</ol>
+<p>But the code block here will not:</p>
+<ol class="codeSnippet">
+    <li>if(0 > 1){</li>
+	<li> </li>
+	<li>}</li>
+</ol>
+<p>And this code block will only run if the variable “x” is a positive number</p>
+<ol class="codeSnippet">
+    <li>if(x > 0){</li>
+	<li> </li>
+	<li>}</li>
+</ol>
+<p>Along with if statements, you may also use else statements.</p>
+<br>
+<p>ELSE statements take no condition but have their own code block, which only runs if the previous IF statement does not run its code (as its condition was false), for example:</p>
+<ol class="codeSnippet">
+    <li>if(x < 0){</li>
+	<li>&nbsp;&nbsp;console.log("Negative");</li>
+	<li>} else {</li>
+	<li>&nbsp;&nbsp;console.log("Positive");</li>
+	<li>}</li>
+</ol>
+<p>ELSE IF statements are good if you want to chain conditions together, for example:</p>
+<ol class="codeSnippet">
+    <li>if(x < 0){</li>
+	<li>&nbsp;&nbsp;console.log("Negative");</li>
+	<li>} else if (x == 0) {</li>
+	<li>&nbsp;&nbsp;console.log("Zero");</li>
+	<li>} else {</li>
+	<li>&nbsp;&nbsp;console.log("Positive");</li>
+	<li>}</li>
+</ol>
+<p>This new condition is only checked if the previous one is false. You can chain many else if statements together.</p>

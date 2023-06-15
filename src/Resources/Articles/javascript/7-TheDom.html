@@ -1,0 +1,24 @@
+<p>The DOM (document object model) is one of the primary ways you can interact with your web page using javascript. It allows you to access the elements of your page through Javascript and manipualte their contents.</p>
+<br>
+<p>In Javascript you can access a built-in object called "document", which contains all the elements on your page and allows you to access and influence them through a number of functions. There are too many to cover in this tutorial, so I reccoment you use this as a starting point from which you can do your own research depending on the functionality you need.</p>
+<br>
+<p>Imagine your page has a &lt;h1&lt; element with the ID "greeting" and the content "Hello World"</p>
+<br>
+<p>You can access it through javascript as follows:</p>
+<ol class="codeSnippet">
+    <li>const element = document.getElementById("greeting");</li>
+</ol>
+<p>There are a number of additional functions like this including document.getElementsByTagName and document.getElementsByClassName.</p>
+<br>
+<p>You can then influence this element in a number of ways, for example:</p>
+<ol class="codeSnippet">
+    <li>element.innerHTML = "Hello World!!!";</li>
+    <li>element.style.color = "red";</li>
+</ol>
+<p>It is even possible to add and remove elements using the functions: document.createElement, document.removeChild, document.appendChild, document.replaceChild and document.write</p>
+<br>
+<p>You can add event handlers as well:</p>
+<ol class="codeSnippet">
+    <li>document.getElementById("greeting").onclick = function(){return "Clicked"};</li>
+</ol>
+<p>As you can see, the possibilites are endless with this level of control - its just a case of unleashing your creativity!</p>
