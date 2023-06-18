@@ -1,0 +1,83 @@
+<p>Looking at our variable declaration from before we can see our first example of an operator</p>
+<ol class="codeSnippet">
+    <li>var myNumberVariable = 10;</li>
+</ol>
+<p>Here “=” is the assignment operator, which tells the computer to try and set the variable on the left’s value to whatever is on the right.</p>
+<br>
+<p>There are two other important types of operator in javascript: arithmetic and logical operators.</p>
+<br>
+<p>Arithmetic operators include add, subtract, multiply, divide and modulo, increment and decrement. These are “+”, “-“, “*”, “/”, “%”, "++", "--" respectively. These are used to complete mathematical operations on numbers. </p>
+<br>
+<p>(Note: modulo is used to get the remainder of a division, so 15%10 is equal to 5, 30%20 is equal to 10, increment increases a variables value by 1, and decrement does the opposite of increment)</p>
+<br>
+<p>So, here’s a few things you can do with the variable from before, assuming myNumberVariable is already defined:</p>
+<ol class="codeSnippet">
+    <li>myNumberVariable = 100 / 50;</li>
+</ol>
+<p>This sets the value of myNumberVariable to 2</p>
+<br>
+<ol class="codeSnippet">
+    <li>var a = 3;</li>
+    <li>var b = 5;</li>
+    <li>myNumberVariable = a * b;</li>
+</ol>
+<p>This sets myNumberVariable to 15</p>
+<ol class="codeSnippet">
+    <li>myNumberVariable = myNumberVariable + 1</li>
+</ol>
+<p>This sets myNumberVariable to store its own value + 1, so 11</p>
+<br>
+<p>Many programming languages have operators such as “+=”, that can be used to shorten the above snippet of pseudocode to:</p>
+<ol class="codeSnippet">
+    <li>myNumberVariable += 1</li>
+</ol>
+<p>This still sets myNumberVariable to store its current value + 1</p>
+<br>
+<p>Logical operators are all about Boolean values and include:</p>
+<ol>
+    <li>“EQUAL TO” (True if both sides are the same, else false)</li>
+    <li>“NOT EQUAL TO” (False if both sides are true, else true)</li>
+    <li>“GREATER THAN” (True if left is greater than right, else false)</li>
+    <li>“LESS THAN”,  (True if left is lesser than right, else false)</li>
+    <li>“GREATER THAN OR EQUAL TO” (True if left is greater than or the same as right, else flase)</li>
+    <li>“LESS THAN OR EQUAL TO” (True if left is lesser than or the same as right, else flase)</li>
+    <li>“AND” (True if both sides true, else false)</li>
+    <li>“OR” (True if either side are true, only false if both sides are false)</li>
+    <li>“NOT” (Inverts a Boolean expression (true -> false or false -> true))</li>
+</ol>
+<p>Once again, the symbols used to represent these vary (especially for AND and OR) – for the sake of simplicity, here I will use: </p>
+<ol>
+    <li>"=="</li>
+    <li>"!="</li>
+    <li>">"</li>
+    <li>"<"</li>
+    <li>">="</li>
+    <li>"<="</li>
+    <li>"&&"</li>
+    <li>"||"</li>
+    <li>"!"</li>
+</ol>
+<p>Logical operators always create statements that evaluate to “true” or “false”, Boolean values, so lets create a variable that can hold the result of a statement:</p>
+<ol class="codeSnippet">
+    <li>var myBoolVariable;</li>
+</ol>
+<p>Here’s some example statements including logical operators:</p>
+<ol class="codeSnippet">
+    <li>var a = 5;</li>
+    <li>var b = 5;</li>
+    <li>myBoolVariable = a==b;</li>
+</ol>
+<p>Sets myBoolVariable to true</p>
+
+<ol class="codeSnippet">
+    <li>myBoolVariable = 7 > 10;</li>
+</ol>
+<p>Sets myBoolVariable to false</p>
+<ol class="codeSnippet">
+    <li>myBoolVariable = ((1 < 2) && (3 > 2));</li>
+</ol>
+<p>Sets myBoolVariable to true, note that brackets can be used in any mathematical or logical statement in most languages</p>
+<ol class="codeSnippet">
+    <li>myBoolVariable = !((1 < 2) || (3 > 4));</li>
+</ol>
+<p>Sets myBoolVariable to false</p>
