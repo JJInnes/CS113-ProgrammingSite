@@ -41,11 +41,18 @@
         $rowCountAfter = $rowCountAfter->num_rows;
 
         if ($rowCountAfter > $rowCountBefore) {
-            echo "Row successfully inserted.";
+            echo '<script type="text/javascript">';
+            echo ' alert("New Post added to the database!")';
+            echo '</script>';
         } else {
-            echo "Something went wrong, no rows have been inserted";
+            echo '<script type="text/javascript">';
+            echo ' alert("There was a problem the post was not added to the database.")';
+            echo '</script>';
         }
         $conn->close();
 
+    }
+    function editPost(){
+        echo index.php;
     }
 ?>
