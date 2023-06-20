@@ -1,0 +1,19 @@
+In simple terms, the client-server model is a way for computers or devices to work together over a network to share information and resources.As the name suggests there are two main components, the client and the server.
+
+Client: The client is like a user or a customer who requests or asks for something. It can be a computer, smartphone, or any device that wants to access information or use a service. For example, when you use a web browser to visit a website or use an app on your phone, you are acting as a client.
+
+Server: The server is like a provider or a helper that fulfills the requests made by clients. It is a powerful computer or software application that stores and manages data, performs tasks, or provides services. Servers are designed to respond to multiple client requests simultaneously.
+
+The request-response cycle is a fundamental process in the client-server model that describes how clients and servers interact. Here's a simplified explanation of the request-response cycle:
+
+Request: When a client wants to obtain information or perform an action, it sends a request to the server. The request specifies what the client needs, such as fetching a web page, submitting a form, or accessing a file.
+
+Processing: Upon receiving the request, the server processes it by analyzing the request's parameters and identifying the required resources or actions. This could involve executing server-side code, querying databases, or performing calculations.
+
+Response: After processing the request, the server generates a response that contains the requested information or indicates the outcome of the requested action. The response may include data, such as a webpage, an image, or a JSON object, along with relevant metadata.
+
+Delivery: The server sends the generated response back to the client over the network. The client, which is patiently waiting for the response, receives it and begins processing it.
+
+Handling the Response: Upon receiving the response, the client interprets and utilizes the information provided. For example, a web browser may render the received HTML and display the webpage, or a software application may use the received data to perform further actions.
+
+The request-response cycle shows the back-and-forth communication between clients and servers. Clients initiate the cycle by sending requests, servers process those requests and generate responses, and then the responses are delivered back to the clients. This cycle allows clients to access the desired information or perform actions by leveraging the capabilities of servers.
