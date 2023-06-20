@@ -1,4 +1,0 @@
-HTML stands for Hypertext Markup Language, and it's what web pages are made of. Imagine the internet as a giant collection of interconnected documents, and HTML is the glue that holds them all together.
-
-HTML is like a set of building blocks that you can use to create your own web pages. It allows you to add text, images, links, videos, and much more. 
-It's a bit like playing with Lego bricks, but instead of building physical objects, you'll be constructing virtual web pages!
