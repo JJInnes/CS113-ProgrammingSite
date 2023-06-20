@@ -53,7 +53,7 @@
     $subNavItems = "";
     for ($i=0; $i < sizeof($articles) - 2; $i++) { 
         $currentNavItem = str_replace("__REDIRECT__", "articles.php?topic=$topic&article=$i", $subNavItem);
-        $currentNavItem = str_replace("__SECONDARYCOLOR__", $secondaryColor, $currentNavItem);
+        $currentNavItem = ($i == $article) ? str_replace("__SECONDARYCOLOR__", 'white', $currentNavItem) : str_replace("__SECONDARYCOLOR__", $secondaryColor, $currentNavItem);
         $subNavItems = $subNavItems . $currentNavItem . "\n";
     }
  
