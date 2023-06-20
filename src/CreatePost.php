@@ -38,6 +38,7 @@
             <!--<div class="createPostPage">-->
             <h2 style="font-family: Arial;color: #292f36">Create new Post</h2>
 
+<div class"createPost">
             <form action="" method="post" >
 <!--                style="font-family: Arial;color: #292f36"-->
                 <label for ="postTitle">Title of Post</label>
@@ -54,6 +55,6 @@
 
                 <button type="submit" name="submit" class="postsubmitButton">Create</button>
             </form>
-            <!--</div>-->
+</div>
 
 

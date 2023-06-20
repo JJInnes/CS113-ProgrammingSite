@@ -47,7 +47,7 @@ $contentFromDB= "This is an example article to edit.";
                 <label for ="postContent">Content of Post</label>
                 <textarea id="postContent" name="postContent" required><?php echo $contentFromDB;?></textarea>
 
-                <button type="submit" name="submit" class="postsubmitButton">Create</button>
+                <button type="submit" name="submit" class="postsubmitButton">Edit</button>
             </form>
             </div>
 
