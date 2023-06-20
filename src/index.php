@@ -12,6 +12,7 @@
 
     $footer = getComponent("./Resources/Components/Shared/footer.html");
     
+    $pageHead = str_replace("__PLACEHOLDER__", "LearnWebDev", $pageHead);
 
     //Return Page
     returnPage($pageHead, $header, $body, $footer);
