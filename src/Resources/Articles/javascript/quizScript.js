@@ -4,105 +4,32 @@ var correctAnswers = 0;
 
 var questions = [
     {
-        question: "This is question one",
+        question: "What is the purpose of javascript?",
         options: [
-            { id: "q1a", value: "a", label: "a) 1" },
-            { id: "q1b", value: "b", label: "b) 2" },
-            { id: "q1c", value: "c", label: "c) 3" },
-            { id: "q1d", value: "d", label: "d) 4" }
+            { id: "q1a", value: "a", label: "a) To add interactivity and dynamic content" },
+            { id: "q1b", value: "b", label: "b) To style content." },
+            { id: "q1c", value: "c", label: "c) To structure content." }
         ],
         answer: "a" // Correct answer for question
     },
     {
-        question: "This is question two",
+        question: "What is the % operator?",
         options: [
-            { id: "q2a", value: "a", label: "a) 1" },
-            { id: "q2b", value: "b", label: "b) 2" },
-            { id: "q2c", value: "c", label: "c) 3" },
-            { id: "q2d", value: "d", label: "d) 4" }
+            { id: "q2a", value: "a", label: "a) Divide" },
+            { id: "q2b", value: "b", label: "b) Not null" },
+            { id: "q2c", value: "c", label: "c) Modulo" }
         ],
-        answer: "a" // Correct answer for question
+        answer: "c" // Correct answer for question
     },
     {
-        question: "This is question three",
+        question: "Why might you use a for loop over a while loop.",
         options: [
-            { id: "q1a", value: "a", label: "a) 1" },
-            { id: "q1b", value: "b", label: "b) 2" },
-            { id: "q1c", value: "c", label: "c) 3" },
-            { id: "q1d", value: "d", label: "d) 4" }
+            { id: "q1a", value: "a", label: "a) It's faster." },
+            { id: "q1b", value: "b", label: "b) To know the number of the current iteration." },
+            { id: "q1c", value: "c", label: "c) To reduce the code complexity." }
         ],
-        answer: "a" // Correct answer for question
-    },
-    {
-        question: "This is question four",
-        options: [
-            { id: "q1a", value: "a", label: "a) 1" },
-            { id: "q1b", value: "b", label: "b) 2" },
-            { id: "q1c", value: "c", label: "c) 3" },
-            { id: "q1d", value: "d", label: "d) 4" }
-        ],
-        answer: "a" // Correct answer for question
-    },
-    {
-        question: "This is question five",
-        options: [
-            { id: "q1a", value: "a", label: "a) 1" },
-            { id: "q1b", value: "b", label: "b) 2" },
-            { id: "q1c", value: "c", label: "c) 3" },
-            { id: "q1d", value: "d", label: "d) 4" }
-        ],
-        answer: "a" // Correct answer for question
-    },
-    {
-        question: "This is question six",
-        options: [
-            { id: "q1a", value: "a", label: "a) 1" },
-            { id: "q1b", value: "b", label: "b) 2" },
-            { id: "q1c", value: "c", label: "c) 3" },
-            { id: "q1d", value: "d", label: "d) 4" }
-        ],
-        answer: "a" // Correct answer for question
-    },
-    {
-        question: "This is question seven",
-        options: [
-            { id: "q2a", value: "a", label: "a) 1" },
-            { id: "q2b", value: "b", label: "b) 2" },
-            { id: "q2c", value: "c", label: "c) 3" },
-            { id: "q2d", value: "d", label: "d) 4" }
-        ],
-        answer: "a" // Correct answer for question
-    },
-    {
-        question: "This is question eight",
-        options: [
-            { id: "q1a", value: "a", label: "a) 1" },
-            { id: "q1b", value: "b", label: "b) 2" },
-            { id: "q1c", value: "c", label: "c) 3" },
-            { id: "q1d", value: "d", label: "d) 4" }
-        ],
-        answer: "a" // Correct answer for question
-    },
-    {
-        question: "This is question nine",
-        options: [
-            { id: "q1a", value: "a", label: "a) 1" },
-            { id: "q1b", value: "b", label: "b) 2" },
-            { id: "q1c", value: "c", label: "c) 3" },
-            { id: "q1d", value: "d", label: "d) 4" }
-        ],
-        answer: "a" // Correct answer for question
-    },
-    {
-        question: "This is question ten",
-        options: [
-            { id: "q1a", value: "a", label: "a) 1" },
-            { id: "q1b", value: "b", label: "b) 2" },
-            { id: "q1c", value: "c", label: "c) 3" },
-            { id: "q1d", value: "d", label: "d) 4" }
-        ],
-        answer: "a" // Correct answer for question
-    },
+        answer: "b" // Correct answer for question
+    }
 ];
 
 function showQuestion(questionNumber) {
