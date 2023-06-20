@@ -22,26 +22,25 @@ body {
     padding: 3vh 3vw 3vh 3vw;
     margin: 1vw 1vh 1vw 1vh;
     display: inline-block;
+    text-align: center;
 }
 #title{
     flex-grow: 1;
 }
 nav{
     display: flex;
-    flex-grow: 10;
+    flex-grow: 3;
     justify-content: center;
+    flex-wrap: wrap;
 }
 nav a{
     border-radius: 4vh;
+    font-size: medium;
 }
 nav a:hover{
     background-color: rgba(0, 0, 0, 0.2);
 }
-a{
-    color: #292f36;
-    text-decoration: none;
-}
-a:active {
+a, a:active{
     color: #292f36;
     text-decoration: none;
 }
@@ -88,6 +87,7 @@ section h2, section p, section ol{
     text-align: center;
 }
 .left{
+    margin-left: 5vw;
     text-align: left;
 }
 
@@ -130,7 +130,8 @@ section h2, section p, section ol{
 
     display: flex;
     justify-content: center;
-
+    flex-direction: row;
+    flex-wrap: nowrap;
 }
 .progressBarElement{
     display: block;
@@ -195,3 +196,24 @@ form{
     top:1px;
 }
 
+@media only screen and (max-width: 1000px) { /*Taken from https://www.w3schools.com/cssref/css3_pr_mediaquery.php*/
+    
+    section, section:hover{
+        height: fit-content;
+        animation-name: none;
+        flex-direction: column;
+    }
+    section h1, section .sectionHalf, section h2, section p, section ol{
+        width: auto;
+    }
+    #progressBar{
+        width: 90vw;
+        margin: 0px 5vw 0px 5vw;
+    }
+    #header{
+        flex-direction: column;
+    }
+    nav{
+        flex-direction: column;
+    }
+}
