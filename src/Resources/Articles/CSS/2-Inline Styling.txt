@@ -1,8 +1,0 @@
-<h1>Inline Styling</h1>
-Get ready to learn a super cool way to make your web pages look awesome—CSS inline styling! With CSS inline styling, you can bring colors, fonts, and other fancy styles to your web creations. It's like sprinkling magic directly onto your HTML elements!
-<br>
-<br>
-So, what exactly is CSS inline styling? Well, remember that HTML is the building blocks of a web page—it's like the skeleton that holds everything together. CSS is the superpower that lets you dress up those HTML elements and make them stand out. And inline styling is a special way to add those styles right inside the HTML tags themselves.
-<br>
-<br>
-Now, let's jump into how you can start using CSS inline styling. It's actually pretty simple! For each HTML element you want to style, you just need to add a special attribute called "style" to its opening tag. Inside that "style" attribute, you can write CSS code that will apply styles directly to that element.
