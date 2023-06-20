@@ -1,0 +1,11 @@
+Client:
+A client refers to a device or software application that interacts with a server to access information or use services. It can be a web browser like Chrome, Firefox, or Safari, which you use to browse the internet. Other examples of clients include mobile apps on smartphones or software running on computers. Clients are like the users or customers who make requests or ask for something from a server.
+
+Sending Requests:
+Clients send requests to servers by establishing a connection over a network. It's similar to asking a question or making a request to someone. The client specifies what it wants, such as a web page or data from a database, and sends that request to the server. This communication is done using a specific protocol, such as HTTP (Hypertext Transfer Protocol), which allows the client to convey its request to the server in a standardized format.
+
+Client-side Technologies:
+Client-side technologies are the tools and technologies used on the client's device to enhance the user experience and interact with servers. When it comes to web browsers, client-side technologies include HTML, CSS, and JavaScript. HTML defines the structure and content of a webpage, CSS handles the visual styling of the page, and JavaScript adds interactivity and dynamic behavior. These technologies work together to create visually appealing and interactive websites or web applications. They allow users to navigate websites easily, input information, click buttons, submit forms, and trigger events, which in turn generate requests to servers.
+
+User Experience:
+Client-side technologies ensure that the user experience is smooth, responsive, and visually appealing. Through the user interface provided by these technologies, users can interact with the server's resources in a user-friendly manner. For example, users can fill out forms, click on links, view multimedia content, and perform various actions on web pages. The client-side technologies handle these interactions and generate appropriate requests to the server. This enhances the overall user experience, making it easy for users to access information, utilize services, and engage with web applications.

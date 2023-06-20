@@ -9,7 +9,7 @@
         <nav>
             <a href="index.php">Home</a>
             <a href="articles.php?topic=HTML&article=0">HTML</a>
-            <a href="articles.php?topic=css&article=0">CSS</a>
+            <a href="articles.php?topic=CSS&article=0">CSS</a>
             <a href="articles.php?topic=javascript&article=0">JavaScript</a>
             <a href="articles.php?topic=Client_Server_Model&article=0">Client Server Model</a>
         </nav>
@@ -38,8 +38,8 @@
             <!--<div class="createPostPage">-->
             <h2 style="font-family: Arial;color: #292f36">Create new Post</h2>
 
-<div class"createPost">
-            <form action="" method="post" >
+<div>
+            <form class="createPost" action="" method="post" >
 <!--                style="font-family: Arial;color: #292f36"-->
                 <label for ="postTitle">Title of Post</label>
                 <input type="text" id="postTitle" name = "postTitle" required>
