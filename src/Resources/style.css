@@ -1,4 +1,4 @@
-body{background-color: #FFFFFF;
+body, .quiz{background-color: #FFFFFF;
      color: #292f36;}
 
 body {
@@ -197,6 +197,32 @@ section h2, section p, section ol{
 .postsubmitButton:active {
     position:relative;
     top:1px;
+}
+
+.quiz .header h1{
+    width: 100%;
+    padding: 0%;
+    margin: 0%;
+    text-align: center;
+}
+.question h2{
+    width: 100%;
+    padding: 0%;
+    margin: 0%;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.quiz main .options{
+    width: fit-content;
+    margin: auto;
+    float: center;
+    padding: 0%;
+    text-align: left;
+}
+
+.quiz main .options input{
+    margin-bottom: 2.5vh;
 }
 
 @media only screen and (max-width: 1000px) { /*Taken from https://www.w3schools.com/cssref/css3_pr_mediaquery.php*/

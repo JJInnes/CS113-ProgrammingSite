@@ -106,7 +106,7 @@ var questions = [
 ];
 
 function showQuestion(questionNumber) {
-    var questionElement = document.querySelector('.quiz main .question h2');
+    var questionElement = document.querySelector('.quiz main .question h5');
     var optionsElement = document.querySelector('.quiz main .options');
 
     var currentQuestionData = questions[questionNumber - 1];

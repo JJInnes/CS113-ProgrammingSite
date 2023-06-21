@@ -1,5 +1,5 @@
 var currentQuestion = 1;
-var totalQuestions = 10; // Change this to the total number of questions
+var totalQuestions = 3; // Change this to the total number of questions
 var correctAnswers = 0;
 
 var questions = [
