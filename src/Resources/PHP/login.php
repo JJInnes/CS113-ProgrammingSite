@@ -26,13 +26,9 @@ $result = $conn->query($sql);
 if ($result->num_rows > 0) {
     echo "Valid user, logged in:\n";
     $user = $result->fetch_assoc();
-    $token = createRawToken($user["Id"], $user["Username"], date("YmdHi"));
-    echo implode(",", $token)."\n";
-    $encodedToken = encodeToken($token);
-    echo $encodedToken."\n";
-    $decodedToken = decodeToken($encodedToken);
-    echo implode(",", $decodedToken)."\n";
-    //$token = generateToken();
+    $token = generateToken($user["Id"], $user["Username"], date("YmdHi"));
+    echo $token."\n";
+    echo verifyTokenUntampered($token); 
     
 } else {
     echo "FALSE";
