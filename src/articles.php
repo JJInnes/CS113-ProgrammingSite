@@ -1,5 +1,5 @@
 <?php
-    include "./Resources/helper.php";
+    include "./Resources/PHP//Helpers/renderHelper.php";
     
     //Set up variables
     $topic = "";

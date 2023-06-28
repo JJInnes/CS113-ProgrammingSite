@@ -8,7 +8,7 @@
 
     $header = getComponent("./Resources/Components/Shared/header.html");
 
-    $body = getComponent("./Resources/Components/indexMain.html");
+    $body = getComponent("./Resources/Components/loginForm.html");
 
     $footer = getComponent("./Resources/Components/Shared/footer.html");
     

@@ -1,8 +1,8 @@
 <?php
 $servername = "devweb2022.cis.strath.ac.uk";
-$username = "qsb22117";
-$password = "XXXXX";
-$dbname = "qsb22117";
+$username = "abc12345";
+$password = "xxx";
+$dbname = "abc12345";
 
 // Create connection
 $conn = new mysqli($servername, $username, $password,$dbname);

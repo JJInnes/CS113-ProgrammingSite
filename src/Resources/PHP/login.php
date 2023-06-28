@@ -1,5 +1,6 @@
 <?php
 include 'ConnectionConfig.php';
+include './Helpers/authHelper.php';
 //print_r($_GET);
 //echo '<br>';
 //print_r($_POST);
@@ -23,7 +24,16 @@ $sql = "SELECT * FROM `CS113Proj_Users` WHERE Username = '$username' AND Passwor
 $result = $conn->query($sql);
 
 if ($result->num_rows > 0) {
-    echo "TRUE";
+    echo "Valid user, logged in:\n";
+    $user = $result->fetch_assoc();
+    $token = createRawToken($user["Id"], $user["Username"], date("YmdHi"));
+    echo implode(",", $token)."\n";
+    $encodedToken = encodeToken($token);
+    echo $encodedToken."\n";
+    $decodedToken = decodeToken($encodedToken);
+    echo implode(",", $decodedToken)."\n";
+    //$token = generateToken();
+    
 } else {
     echo "FALSE";
 }

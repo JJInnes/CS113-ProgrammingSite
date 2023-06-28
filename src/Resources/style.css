@@ -213,7 +213,7 @@ section h2, section p, section ol{
     margin-bottom: 20px;
 }
 
-.quiz main .options{
+.quiz main .options, .loginForm{
     width: fit-content;
     margin: auto;
     float: center;
@@ -223,6 +223,10 @@ section h2, section p, section ol{
 
 .quiz main .options input{
     margin-bottom: 2.5vh;
+}
+
+.loginForm{
+    padding: 2vw;
 }
 
 @media only screen and (max-width: 1000px) { /*Taken from https://www.w3schools.com/cssref/css3_pr_mediaquery.php*/

@@ -19,7 +19,7 @@
 
 </main>
 <?php
-    include 'Resources/helper.php';
+    include 'Resources/PHP//Helpers/renderHelper.php';
 
     if(isset($_POST['submit'])){
         $title = strip_tags($_POST['postTitle']);
