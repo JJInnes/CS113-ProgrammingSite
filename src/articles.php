@@ -1,5 +1,6 @@
 <?php
     include "./Resources/PHP//Helpers/renderHelper.php";
+    include "./Resources/PHP//Helpers/authHelper.php";
     include "./Resources/PHP/ConnectionConfig.php";
     
     //Set up variables
@@ -10,6 +11,27 @@
         $article = $_GET['article'];
     } else {
         throw new Exception("No ARTICLE OR TOPIC PROVIDED");
+    }
+
+    if(isset($_COOKIE["authToken"])){
+        if(verifyTokenUntampered($_COOKIE["authToken"])){
+            $userToken = json_decode(decodeToken($_COOKIE["authToken"]));
+            
+            $sql = "SELECT completed FROM `CS113Proj_UserProgress` WHERE userID = '$userToken->id' AND category = '$topic';";
+            $result = $conn->query($sql);
+            $progresses = $result->fetch_all(); 
+
+            $completedArticles = array();
+            for ($i=0; $i < sizeof($progresses); $i++){
+                array_push($completedArticles, $progresses[$i][0]);
+            }
+
+            if(!in_array($article, $completedArticles)){
+                $guid = createGUID();
+                $sql = "INSERT INTO CS113Proj_UserProgress (Id, userID, category, completed) VALUES ('$guid', '$userToken->id', '$topic', $article);";
+                $result = $conn->query($sql);
+            }
+        }
     }
 
     $title = "";
@@ -53,9 +75,12 @@
     $subNavItem = getComponent("./Resources/Components/Shared/progressNavElement.html");
     $subNavItems = "";
     
-    for ($i=0; $i < sizeof($articles); $i++) { 
+    for ($i=0; $i < sizeof($articles); $i++) {
         $currentNavItem = str_replace("__REDIRECT__", "articles.php?topic=$topic&article=$i", $subNavItem);
         $currentNavItem = ($i == $article) ? str_replace("__SECONDARYCOLOR__", 'white', $currentNavItem) : str_replace("__SECONDARYCOLOR__", $secondaryColor, $currentNavItem);
+        if(isset($completedArticles)){
+            $currentNavItem = in_array($i, $completedArticles) ? str_replace("__INTERNAL__", "&#9745;", $currentNavItem): str_replace("__INTERNAL__", "", $currentNavItem);
+        }
         $subNavItems = $subNavItems . $currentNavItem . "\n";
     }
  
