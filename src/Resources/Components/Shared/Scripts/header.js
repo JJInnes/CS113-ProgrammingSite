@@ -1,7 +1,6 @@
 function quickLogOut(){
-    console.log("CLEARED AUTH");
-    document.cookie = 'authToken=; path=';
-    document.cookie = 'loggedIn=false; path=';
+    console.log("CLEARED AUTH:");
+    document.cookie = 'authToken="abcd";path=/;Max-Age=0;';
     location.reload();
 }
 

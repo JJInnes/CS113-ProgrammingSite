@@ -1,10 +1,6 @@
 <?php
 include 'ConnectionConfig.php';
 include './Helpers/authHelper.php';
-//print_r($_GET);
-//echo '<br>';
-//print_r($_POST);
-//echo '<br>';
 
 $username = strip_tags(isset($_POST["username"]) ? $_POST["username"] : "");
 $password = strip_tags(isset($_POST["password"]) ? $_POST["password"] : "");
@@ -24,18 +20,15 @@ $sql = "SELECT * FROM `CS113Proj_Users` WHERE Username = '$username' AND Passwor
 $result = $conn->query($sql);
 
 if ($result->num_rows > 0) {
-    echo "Valid user, logged in:\n";
+    echo "LoggedIn";
     $user = $result->fetch_assoc();
     $token = generateToken($user["Id"], $user["Username"], date("YmdHi"));
-    echo $token."\n";
-    echo verifyTokenUntampered($token); 
-    echo "<script>document.cookie = 'authToken=$token; path=/';</script>";
-    echo "<script>document.cookie = 'loggedIn=true; path=/';</script>";
+    echo "<script>document.cookie = 'authToken=$token;path=/;Max-Age=3600;';</script>";
     
 } else {
-    echo "FALSE";
+    echo "Failed to log in";
 }
 $conn->close();
 
+echo '<meta http-equiv="refresh" content="0;url=../../index.php">';
 ?>
-
