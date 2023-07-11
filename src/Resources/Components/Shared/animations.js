@@ -21,7 +21,6 @@ async function typingAnimation(itemID, endString){
         }
 
         element.innerHTML = displayString.replace(/</g, '&lt;').replace(/>/g, '&gt;'); //Taken from https://stackoverflow.com/questions/47372291/escaping-the-greater-than-and-less-than-symbols-in-javascript
-        console.log(displayString);
         await sleep(100);
     }
 

@@ -1,8 +1,15 @@
+function quickLogOut(){
+    console.log("CLEARED AUTH");
+    document.cookie = 'authToken=; path=';
+    document.cookie = 'loggedIn=false; path=';
+    location.reload();
+}
+
 console.log("HEADER:");
 console.log("Cookies:");
 console.log(document.cookie);
 
-const regex = /authToken=.+?;/gm;
+const regex = /authToken=[^;]+?(;|$)/gm;
 
 try{        //Is logged in
     var tokenCookie = regex.exec(document.cookie)[0];
@@ -18,7 +25,7 @@ try{        //Is logged in
     console.log("Token:");
     console.log(token);
 
-    document.getElementById("user").innerHTML = token.name;
+    document.getElementById("user").innerHTML = '<div id="userImage"></div> <p>' + token.name + '</p><div id="quickSignOut" onClick="quickLogOut()"></div>';
 } 
 catch{      //Is not logged in
 

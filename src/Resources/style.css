@@ -17,9 +17,10 @@ body {
 
 #header{
     display: flex;
+    align-items: center;
 }
 #title, nav a, #user{
-    padding: 3vh 3vw 3vh 3vw;
+    padding: 2vh 2vw 2vh 2vw;
     margin: 1vw 1vh 1vw 1vh;
     display: inline-block;
     text-align: center;
@@ -35,15 +36,36 @@ nav{
 }
 nav a{
     border-radius: 4vh;
-    font-size: medium;
+    font-size: 95%;
 }
 nav a:hover{
     background-color: rgba(0, 0, 0, 0.2);
 }
 #user{
+    padding-left: 0%;
+    padding-right: 0%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     border: 1px solid #292f36;
     border-radius: 5vh;
     flex-grow: 1;
+}
+#userImage{
+    width: 30px;
+    height: 30px;
+    margin-right: 10px;
+    border-radius: 15px;
+    background-color: lightgreen;
+    display: inline-block;
+}
+#quickSignOut{
+    width: 40px;
+    height: 40px;
+    margin-left: 20px;
+    border-radius: 20px;
+    background-color: red;
+    display: inline-block;
 }
 a, a:active{
     color: #292f36;
