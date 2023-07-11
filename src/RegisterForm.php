@@ -7,9 +7,8 @@
     $pageHead = getComponent("./Resources/Components/Shared/pagehead.html");
 
     $header = getComponent("./Resources/Components/Shared/header.html");
-
-    $body = getComponent("./Resources/PHP/register.php");   
-    // $body = getComponent("./Resources/Components/RegisterForm.html");
+   
+    $body = getComponent("./Resources/Components/RegisterForm.html");
 
 
     $footer = getComponent("./Resources/Components/Shared/footer.html");

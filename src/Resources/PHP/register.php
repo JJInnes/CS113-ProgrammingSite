@@ -6,31 +6,47 @@ include './Helpers/renderHelper.php';
 $message = "";
 
 
-if(isset($_POST['submit'])){
-    $emailAddress = strip_tags($_POST['emailaddress']);
-    $registerusername = strip_tags($_POST['username']);
-    $password = strip_tags($_POST['password']);
+$emailAddress = strip_tags(isset($_POST['emailaddress']) ? $_POST["emailaddress"] : "");
+$registerusername = strip_tags(isset($_POST["username"]) ? $_POST["username"] : "");
+$password = strip_tags(isset($_POST["password"]) ? $_POST["password"] : "");
 
-}
-
-if (!validateEmail($emailAddress)) {
-    $message = "Email Address does not follow correct syntax.";
+if($emailAddress==="" or $registerusername==="" or $password===""){
+    echo '<script type="text/javascript">';
+    echo ' alert("Fields cannot be blank!")';
+    echo '</script>';
+    header('Refresh: 0; URL=../../RegisterForm.php');
 }else{
-    $checkIfDetailsTaken = false;
+    if (!validateEmail($emailAddress)) {
 
-    $checkIfDetailsTaken = checkRegisterDetails($registerusername,$emailAddress);
-
-    if($checkIfDetailsTaken == true){
-        $message = "These credentials are available!";
-        createNewUser($registerusername,$emailAddress,$password);
-
-        //PASS AUTHENTICATED USER DETAILS TO HOME PAGE HERE
+        echo '<script type="text/javascript">';
+        echo ' alert("Email Address does not follow correct syntax.")';
+        echo '</script>';
+        header('Refresh: 0; URL=../../RegisterForm.php');
 
     }else{
-        $message = "These credentials are not available.";
+        $checkIfDetailsTaken = false;
+
+        $checkIfDetailsTaken = checkRegisterDetails($registerusername,$emailAddress);
+
+        if($checkIfDetailsTaken == true){
+            $message = "These credentials are available!";
+            createNewUser($registerusername,$emailAddress,$password);
+
+            //REDIRECT TO LOGIN PAGE HERE
+            echo '<script type="text/javascript">';
+            echo ' alert("Account created successfully!")';
+            echo '</script>';
+            header('Refresh: 0; URL=../../loginForm.php');
+        }else{
+            
+
+            echo '<script type="text/javascript">';
+            echo ' alert("These credentials are not available.")';
+            echo '</script>';
+            header('Refresh: 0; URL=../../RegisterForm.php');
+        }
     }
 }
-
 
 
 function validateEmail($emailAddress) {
@@ -38,21 +54,9 @@ function validateEmail($emailAddress) {
     return preg_match($pattern, $emailAddress);
 }
 
+
+
+
+
+
 ?>
-
-<form action="" role ="form" method="post" class="panel loginForm">
-    <h4>Register:</h4>
-    
-    <h4><?php echo $message; ?></h4>
-    <p>Email Address: <input type = "text" name="emailaddress" placeholder="Email Address"></p>
-    <p>Username: <input type = "text" name="username" placeholder="Username"></p>
-    <p>Password: <input type = "password" name="password" placeholder="Password"></p>
-    <br>
-    <button type = "submit" name = "submit">Submit</button>
-
-</form>
-
-
-
-
-

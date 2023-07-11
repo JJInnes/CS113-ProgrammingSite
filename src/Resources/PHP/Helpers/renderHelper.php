@@ -106,14 +106,11 @@
         $rowCountAfter = $conn->query($previousRowCountQuery);
         $rowCountAfter = $rowCountAfter->num_rows;
 
+        $successmessage = "";
         if ($rowCountAfter > $rowCountBefore) {
-            echo '<script type="text/javascript">';
-            echo ' alert("New user added to the database!")';
-            echo '</script>';
+            $successmessage = "New account added to the database!";
         } else {
-            echo '<script type="text/javascript">';
-            echo ' alert("There was a problem creating your user.")';
-            echo '</script>';
+            $successmessage = "There was a problem creating your user.";
         }
         $conn->close();
     }
