@@ -1,5 +1,6 @@
 <?php
     include "./Resources/PHP//Helpers/renderHelper.php";
+    include "./Resources/PHP/ConnectionConfig.php";
     
     //Set up variables
     $topic = "";
@@ -25,12 +26,12 @@
             $accentColor = "#43fe78";
             $secondaryColor = "#8FFFAF";
             break;
-        case "javascript":
+        case "Javascript":
                 $title = "JavaScript";
                 $accentColor = "#FF6B6B";
                 $secondaryColor = "#FFB8B8";
             break;
-        case "Client_Server_Model":
+        case "Client Server Model":
                 $title = "The Client Server Model";
                 $accentColor = "#ffdf6a";
                 $secondaryColor = "#FFF0B8";
@@ -39,10 +40,10 @@
             break;
       }
 
-    // $title = topicNameToTitle($topic);
-    // $accentColor = topicNameToAccentColor($topic);
+    $sql = "SELECT * FROM `CS113Proj_Posts` WHERE post_category  = '$topic'";
+    $result = $conn->query($sql);
 
-    $articles = scandir("./Resources/Articles/$topic");
+    $articles = $result->fetch_all(); 
 
     //Set up components
     $pageHead = getComponent("./Resources/Components/Shared/pagehead.html");
@@ -51,14 +52,14 @@
 
     $subNavItem = getComponent("./Resources/Components/Shared/progressNavElement.html");
     $subNavItems = "";
-    for ($i=0; $i < sizeof($articles) - 2; $i++) { 
+    
+    for ($i=0; $i < sizeof($articles); $i++) { 
         $currentNavItem = str_replace("__REDIRECT__", "articles.php?topic=$topic&article=$i", $subNavItem);
         $currentNavItem = ($i == $article) ? str_replace("__SECONDARYCOLOR__", 'white', $currentNavItem) : str_replace("__SECONDARYCOLOR__", $secondaryColor, $currentNavItem);
         $subNavItems = $subNavItems . $currentNavItem . "\n";
     }
  
-    $articleURLend = $articles[$article + 2];
-    $content = getComponent("./Resources/Articles/$topic/$articleURLend");
+    $content = $articles[$article][4];
     $body = getComponent("./Resources/Components/articleBody.html");
     $body = str_replace("_TITLE_", $title, $body);
     $body = str_replace("__NAVELEMENTS__", $subNavItems, $body);
