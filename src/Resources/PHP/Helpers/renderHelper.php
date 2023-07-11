@@ -27,7 +27,8 @@
     }
 
     function addPost($title,$author,$category,$content){
-        include '../PHP/ConnectionConfig.php';
+
+        include './Resources/PHP/ConnectionConfig.php';
 
         $previousRowCountQuery = "SELECT * FROM CS113Proj_Posts;";
         $previousRowCount = $conn->query($previousRowCountQuery);
