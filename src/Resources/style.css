@@ -18,7 +18,7 @@ body {
 #header{
     display: flex;
 }
-#title, nav a{
+#title, nav a, #user{
     padding: 3vh 3vw 3vh 3vw;
     margin: 1vw 1vh 1vw 1vh;
     display: inline-block;
@@ -29,7 +29,7 @@ body {
 }
 nav{
     display: flex;
-    flex-grow: 3;
+    flex-grow: 2;
     justify-content: center;
     flex-wrap: wrap;
 }
@@ -39,6 +39,11 @@ nav a{
 }
 nav a:hover{
     background-color: rgba(0, 0, 0, 0.2);
+}
+#user{
+    border: 1px solid #292f36;
+    border-radius: 5vh;
+    flex-grow: 1;
 }
 a, a:active{
     color: #292f36;

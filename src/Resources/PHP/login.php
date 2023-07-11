@@ -29,6 +29,8 @@ if ($result->num_rows > 0) {
     $token = generateToken($user["Id"], $user["Username"], date("YmdHi"));
     echo $token."\n";
     echo verifyTokenUntampered($token); 
+    echo "<script>document.cookie = 'authToken=$token; path=/';</script>";
+    echo "<script>document.cookie = 'loggedIn=true; path=/';</script>";
     
 } else {
     echo "FALSE";
