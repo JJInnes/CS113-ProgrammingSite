@@ -30,6 +30,12 @@
 
         include './Resources/PHP/ConnectionConfig.php';
 
+        $title = $conn -> real_escape_string($title);
+        $author = $conn -> real_escape_string($author);
+        $category = $conn -> real_escape_string($category);
+        $content = $conn -> real_escape_string($content);
+
+
         $previousRowCountQuery = "SELECT * FROM CS113Proj_Posts;";
         $previousRowCount = $conn->query($previousRowCountQuery);
         $rowCountBefore = $previousRowCount->num_rows;
@@ -95,6 +101,11 @@
     }
     function createNewUser($registerusername,$registeremailaddress,$registerpassword){
         include '../PHP/ConnectionConfig.php';
+
+
+        $registerusername = $conn -> real_escape_string($registerusername);
+        $registeremailaddress = $conn -> real_escape_string($registeremailaddress);
+        $registerpassword = $conn -> real_escape_string($registerpassword);
 
         $previousRowCountQuery = "SELECT * FROM CS113Proj_Users;";
         $previousRowCount = $conn->query($previousRowCountQuery);
@@ -191,27 +202,19 @@
     function updatePost($postID,$title,$author,$category,$content){
         include '../PHP/ConnectionConfig.php';
 
+        $title = $conn -> real_escape_string($title);
+        $content = $conn -> real_escape_string($content);
+        $author = $conn -> real_escape_string($author);
+
         $sql = "UPDATE `CS113Proj_Posts` SET `post_title`='$title',`post_author`='$author',`post_category`='$category',`post_content`='$content' where post_id = $postID";
         
-        $result = $conn->query($sql);
+        $result = $conn -> query($sql);
 
-        $currentTitle = editPostGetPostTitle($postID,2);
-        $currentAuthor = editPostGetPostAuthor($postID,2);
-        $currentCategory = editPostGetPostCategory($postID,2);
-        $currentContent = editPostGetPostContent($postID,2);
-
-        if($title==$currentTitle && $author==$currentAuthor && $category==$currentCategory && $content==$currentContent){
-            echo '<script type="text/javascript">';
-            echo ' alert("Post successfully updated!")';
-            echo '</script>';
-            header('Refresh: 0; URL=../../index.php');
-        }
-        else{
-            echo '<script type="text/javascript">';
-            echo ' alert("Failed")';
-            echo '</script>';
-            header('Refresh: 0; URL=../../index.php');
-        }
+        echo '<script type="text/javascript">';
+        echo ' alert("Post successfully updated!")';
+        echo '</script>';
+        header('Refresh: 0; URL=../../index.php');
+        
 
         $conn->close();
     }

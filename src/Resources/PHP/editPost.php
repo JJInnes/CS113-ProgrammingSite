@@ -1,5 +1,6 @@
 <?php
 include './Helpers/renderHelper.php';
+
 if(isset($_POST['submit'])){
 
 $postID = $_POST['postID'];    

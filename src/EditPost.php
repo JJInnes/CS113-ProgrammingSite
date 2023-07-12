@@ -16,9 +16,29 @@
     $categoryFromDB = editPostGetPostCategory($postID,1);
     $contentFromDB = editPostGetPostContent($postID,1);
     
-    
+    $defaultTopicSelectionHTML="";
+    $defaultTopicSelectionCSS="";
+    $defaultTopicSelectionJavaScript="";
+    $defaultTopicSelectionCSM="";
 
 
+
+    switch ($categoryFromDB) {
+        case "HTML":
+            $defaultTopicSelectionHTML='selected="selected"';
+            break;
+        case "CSS":
+            $defaultTopicSelectionCSS='selected="selected"';
+            break;
+        case "Javascript":
+            $defaultTopicSelectionJavaScript='selected="selected"';
+            break;
+        case "Client Server Model":
+            $defaultTopicSelectionCSM='selected="selected"';
+            break;
+        default:
+            break;
+      }
 
     
 
@@ -39,21 +59,21 @@
 <!--                style="font-family: Arial;color: #292f36"-->
                 <input type="hidden" id="postID" name="postID" value="<?php echo $postID;?>">
                 <label for ="postTitle">Title of Post</label>
-                <input type="text" id="postTitle" name = "postTitle" value="" placeholder="<?php echo $titleFromDB;?>" required>
+                <input type="text" id="postTitle" name = "postTitle" value="<?php echo $titleFromDB;?>" required>
                 <br>
                 <label for ="postAuthor">Author of Post</label>
-                <input type = "text" id="postAuthor" name="postAuthor" value="" placeholder="<?php echo $authorFromDB;?>" required>
+                <input type = "text" id="postAuthor" name="postAuthor" value="<?php echo $authorFromDB;?>"  required>
                 <br>
                 <label for ="postCategory">Category of Post</label>
                 <select name="postCategory" id="postCategory">
-                    <option value="HTML">HTML</option>
-                    <option value="CSS">CSS</option>
-                    <option value="Javascript">Javascript</option>
-                    <option value="Client Server Model">Client Server Model</option>
+                    <option <?php echo $defaultTopicSelectionHTML;?>value="HTML">HTML</option>
+                    <option <?php echo $defaultTopicSelectionCSS;?>value="CSS">CSS</option>
+                    <option <?php echo $defaultTopicSelectionJavaScript;?>value="Javascript">Javascript</option>
+                    <option <?php echo $defaultTopicSelectionCSM;?>value="Client Server Model">Client Server Model</option>
                 </select>
                 <br>
                 <label for ="postContent" >Content of Post</label>
-                <textarea id="postContent" name="postContent" required class = "editContentTextbox" placeholder="<?php echo $contentFromDB;?>"></textarea>
+                <textarea id="postContent" name="postContent" required class = "editContentTextbox" ><?php echo $contentFromDB;?></textarea>
                 <br>
                 <button type="submit" name="submit" class="postsubmitButton">Edit Post</button>
             </form>
