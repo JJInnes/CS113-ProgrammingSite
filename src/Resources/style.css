@@ -60,12 +60,16 @@ nav a:hover{
     display: inline-block;
 }
 #quickSignOut{
-    width: 40px;
-    height: 40px;
-    margin-left: 20px;
-    border-radius: 20px;
-    background-color: red;
+    width: 28px;
+    height: 28px;
+    margin-left: 16px;
+    border-radius: 16px;
     display: inline-block;
+    padding: 4px;
+}
+#quickSignOut:hover{
+    background-color: rgba(0, 0, 0, 0.2);
+    cursor: pointer;
 }
 a, a:active{
     color: #292f36;
@@ -166,6 +170,7 @@ section h2, section p, section ol{
     height: 20px;
     margin: 5px;
     padding: 0px;
+    font-weight: bolder;
 }
 .progressBarElement:hover{
     animation-name: progressBarBounce;

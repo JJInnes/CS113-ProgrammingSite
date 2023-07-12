@@ -79,7 +79,7 @@
         $currentNavItem = str_replace("__REDIRECT__", "articles.php?topic=$topic&article=$i", $subNavItem);
         $currentNavItem = ($i == $article) ? str_replace("__SECONDARYCOLOR__", 'white', $currentNavItem) : str_replace("__SECONDARYCOLOR__", $secondaryColor, $currentNavItem);
         if(isset($completedArticles)){
-            $currentNavItem = in_array($i, $completedArticles) ? str_replace("__INTERNAL__", "&#9745;", $currentNavItem): str_replace("__INTERNAL__", "", $currentNavItem);
+            $currentNavItem = in_array($i, $completedArticles) ? str_replace("__INTERNAL__", "&#10004;", $currentNavItem): str_replace("__INTERNAL__", "", $currentNavItem);
         } else{
             $currentNavItem = str_replace("__INTERNAL__", "", $currentNavItem);
         }

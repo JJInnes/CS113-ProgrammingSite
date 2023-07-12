@@ -24,7 +24,7 @@ try{        //Is logged in
     console.log("Token:");
     console.log(token);
 
-    document.getElementById("user").innerHTML = '<div id="userImage"></div> <p>' + token.name + '</p><div id="quickSignOut" onClick="quickLogOut()"></div>';
+    document.getElementById("user").innerHTML = '<div id="userImage"></div> <p>' + token.name + '</p><img src="./Resources/Images/Logout.png" id="quickSignOut" onClick="quickLogOut()"></img>';
 } 
 catch{      //Is not logged in
 
