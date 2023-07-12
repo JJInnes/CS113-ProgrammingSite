@@ -80,6 +80,8 @@
         $currentNavItem = ($i == $article) ? str_replace("__SECONDARYCOLOR__", 'white', $currentNavItem) : str_replace("__SECONDARYCOLOR__", $secondaryColor, $currentNavItem);
         if(isset($completedArticles)){
             $currentNavItem = in_array($i, $completedArticles) ? str_replace("__INTERNAL__", "&#9745;", $currentNavItem): str_replace("__INTERNAL__", "", $currentNavItem);
+        } else{
+            $currentNavItem = str_replace("__INTERNAL__", "", $currentNavItem);
         }
         $subNavItems = $subNavItems . $currentNavItem . "\n";
     }
