@@ -261,6 +261,43 @@ section h2, section p, section ol{
     padding: 2vw;
 }
 
+.view-profile{
+    font-family: Arial;
+    color: #292f36;
+    box-sizing: border-box;
+    padding: 5rem;
+    border-radius: 1rem;
+    background-color: #d9dadc;
+    border-color: darkgray;
+    display: flow-root;
+    justify-content: flex-start;
+    font-weight: bold;
+}
+.view-profile-header{
+
+}
+.view-profile-body{
+    font-size: 25px;
+
+}
+.viewProfileButton{
+    box-shadow: 0px 0px 0px 2px #000000;
+    background-color: #FFFFFF;;
+    border-radius:10px;
+    border:1px solid #000000;
+    display:inline-block;
+    cursor:pointer;
+    color:#292f36;
+    font-family:Arial;
+    font-size:19px;
+    padding:12px 37px;
+    text-decoration:none;
+    text-shadow:0px 1px 0px #283966;
+}
+.editContentTextbox{
+    width: 250;
+    height: 250;
+}
 @media only screen and (max-width: 1000px) { /*Taken from https://www.w3schools.com/cssref/css3_pr_mediaquery.php*/
     
     section, section:hover{

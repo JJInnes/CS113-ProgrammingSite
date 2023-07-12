@@ -87,11 +87,14 @@
     }
  
     $content = $articles[$article][4];
+    $postID= $articles[$article][0];
+
     $body = getComponent("./Resources/Components/articleBody.html");
     $body = str_replace("_TITLE_", $title, $body);
     $body = str_replace("__NAVELEMENTS__", $subNavItems, $body);
     $body = str_replace("_CONTENT_", $content, $body);
     $body = str_replace("_ACCENTCOLOR_", $accentColor, $body);
+    $body = str_replace("_POSTID_", $postID, $body);
 
     $footer = getComponent("./Resources/Components/Shared/footer.html");
 
