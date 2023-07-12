@@ -100,7 +100,8 @@
         $previousRowCount = $conn->query($previousRowCountQuery);
         $rowCountBefore = $previousRowCount->num_rows;
 
-        $sql = "INSERT INTO `CS113Proj_Users`(`Id`, `EmailAddress`, `Username`, `Password`) VALUES (NULL,'$registeremailaddress','$registerusername','$registerpassword')";
+        $registerGUID = createGUID();
+        $sql = "INSERT INTO `CS113Proj_Users`(`Id`, `EmailAddress`, `Username`, `Password`) VALUES ('$registerGUID','$registeremailaddress','$registerusername','$registerpassword')";
 
         $result = $conn->query($sql);
 
