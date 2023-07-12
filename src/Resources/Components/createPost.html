@@ -7,11 +7,21 @@
         <label for ="postAuthor">Author of Post</label>
         <input type = "text" id="postAuthor" name="postAuthor" required>
 
-        <label for ="postCategory">Category of Post</label>
-        <input type="text" id="postCategory" name="postCategory" required>
+        <!-- <label for ="postCategory">Category of Post</label>
+        <input type="text" id="postCategory" name="postCategory" required> -->
+
+        
 
         <label for ="postContent">Content of Post</label>
         <textarea id="postContent" name="postContent" required></textarea>
+
+        <label for ="postCategory">Category of Post</label>
+        <select name="postCategory" id="postCategory">
+            <option value="HTML">HTML</option>
+            <option value="CSS">CSS</option>
+            <option value="Javascript">Javascript</option>
+            <option value="Client Server Model">Client Server Model</option>
+        </select>
 
         <button type="submit" name="submit" class="postsubmitButton">Create</button>
     </form>

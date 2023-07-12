@@ -1,6 +1,7 @@
 <?php
     include 'Resources/PHP//Helpers/renderHelper.php';
 
+
     if(isset($_POST['submit'])){
         $title = strip_tags($_POST['postTitle']);
         $author = strip_tags($_POST['postAuthor']);
